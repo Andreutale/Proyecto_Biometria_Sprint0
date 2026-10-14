@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.widget.LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- texto unico de la pantalla: vacio por defecto,
+         luego Escaneando... / Codigo / Enviado con exito -->
+    <TextView
+        android:id="@+id/texto"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:textSize="28sp"
+        android:text="" />
+
+    <!-- ---------------------------------------------------- -->
+    <!-- los tres botones: Detener sustituye a Escanear y
+         Enviar solo aparece cuando hay codigo detectado -->
+    <android.widget.LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/botonEscanear"
+            android:text="Escanear"
+            android:onClick="botonEscanearPulsado"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/botonDetener"
+            android:text="Detener"
+            android:onClick="botonDetenerPulsado"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/botonEnviar"
+            android:text="Enviar"
+            android:onClick="botonEnviarPulsado"
+            android:visibility="gone"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content" />
+
+    </android.widget.LinearLayout>
+
+</android.widget.LinearLayout>

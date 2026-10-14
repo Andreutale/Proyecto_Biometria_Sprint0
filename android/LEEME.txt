@@ -1,0 +1,28 @@
+LEEME - App Android del beacon
+==============================
+
+Ficheros de la app del telefono (spec: apartado 5 de Tarea 2).
+La logica de estados no esta aqui: esta en ../logicaFakeTelefono/.
+
+1) MONTAR EL PROYECTO EN ANDROID STUDIO
+   - Abrir Android Studio (la primera vez descarga el SDK solo).
+   - Crear un proyecto vacio (minSdk 28) con nombre de paquete es.gti3a.beacon.
+   - Copiar a app/src/main/java/es/gti3a/beacon/:
+       MainActivity.java, EscannerBeaconBluetooth.java, TramaIBeacon.java
+   - Copiar a app/src/main/java/ (paquete raiz, sin carpeta):
+       ../../logicaFakeTelefono/*.java   (EstadoLogica, EscannerBeacon,
+       EscannerBeaconFake, ClienteREST, ClienteRESTHttp, LogicaFake)
+   - Copiar activity_main.xml a app/src/main/res/layout/.
+   - Fusionar AndroidManifest.xml y build.gradle con los del proyecto.
+
+2) URL DEL SERVIDOR (MainActivity.URL_SERVIDOR)
+   - Emulador: http://10.0.2.2:8080/rest/guardarCodigo.php  (por defecto)
+   - Movil fisico: la IP del PC en la misma red, por ejemplo
+     http://192.168.1.50:8080/rest/guardarCodigo.php
+
+3) ARRANCAR EL SERVIDOR EN EL PC (desde la carpeta Proyecto/)
+   php -S localhost:8080 -t .
+
+4) EL BEACON DEL SENSOR (../arduino/)
+   - Nombre del anuncio: Andreutale  (lo filtra EscannerBeaconBluetooth)
+   - Codigo que emite en el minor: 1234
