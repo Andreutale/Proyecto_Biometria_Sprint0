@@ -1,0 +1,94 @@
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<!DOCTYPE html>
+<html>
+
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<head>
+<meta charset="utf-8"/>
+<title>Beacon - Consulta de código</title>
+
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<style>
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+}
+
+/* un unico texto centrado horizontal y verticalmente */
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-size: 2em;
+  color: #000000;
+}
+
+#texto {
+  margin: 0;
+}
+</style>
+
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<script src="logicaFake/consultarUltimoCodigo.js"></script>
+
+<!-- ---------------------------------------------------- -->
+<script>
+// ---------------------------------------------------
+//
+// -> pintar( texto:Texto ) -> bool
+//
+// escribe el texto en pantalla (unico elemento de la pagina)
+//
+// ---------------------------------------------------
+function pintar( texto ) {
+  var elemento = document.getElementById( "texto" );
+  if ( ! elemento ) {
+    return false;
+  }
+  elemento.innerHTML = texto;
+  return true;
+}
+
+// ---------------------------------------------------
+//
+// -> cargarAplicacion() -> bool
+//   (consulta el último código y lo pinta en pantalla)
+//
+// ---------------------------------------------------
+function cargarAplicacion() {
+  // mientras no llegue la respuesta se muestra este texto
+  pintar( "Consultando..." );
+
+  // llamo a la función de la lógica (versión fake)
+  consultarUltimoCodigo( function( err, res ) {
+    if ( err ) {
+      pintar( "No hay código" );
+      return;
+    }
+    pintar( "Código: " + res.valor );
+  } );
+
+  return true;
+}
+</script>
+
+</head>
+
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
+<body onload="cargarAplicacion()">
+
+<p id="texto"></p>
+
+</body>
+</html>
+<!-- ---------------------------------------------------- -->
+<!-- ---------------------------------------------------- -->
