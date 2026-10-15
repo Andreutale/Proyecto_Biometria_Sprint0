@@ -86,4 +86,4 @@ con un resumen `X/Y tests correctos`:
 | `php tests/test_rest.php` | Contratos JSON de los endpoints (servidor en 8080) | 5 |
 | Ejecutar `tests/TestLogicaFakeTelefono.java` (Java 17) | Máquina de estados del móvil con dobles | 8 |
 | `node tests/test_logica_fake_web.js` | Fake web con doble del XHR | 3 |
-| Abrir `ux/test_ux.html` en el navegador | Textos y visibilidades de la web | 4 |
+| Abrir `tests/test_ux.html` en el navegador | Textos y visibilidades de la web | 4 |
