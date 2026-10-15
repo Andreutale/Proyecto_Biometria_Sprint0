@@ -72,6 +72,11 @@ public:
 											(*this).RSSI // rssi
 									);
 
+	// --- diagnostico: comprobar si el anuncio esta realmente activo ---
+	Globales::elPuerto.escribir( "diagnostico: anunciando = " );
+	Globales::elPuerto.escribir( (*this).laEmisora.estaAnunciando() ? "true" : "false" );
+	Globales::elPuerto.escribir( "\n" );
+
 	/*
 	Globales::elPuerto.escribir( "   publicarCO2(): valor=" );
 	Globales::elPuerto.escribir( valorCO2 );

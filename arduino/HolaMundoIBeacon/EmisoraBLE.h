@@ -41,7 +41,11 @@ public:
 
     // Enciende la pila de radio Bluefruit y detiene anuncios residuales
     void encenderEmisora() {
-        Bluefruit.begin();
+        // --- diagnostico: comprobar si la pila BLE arranca ---
+        bool ok = Bluefruit.begin();
+        Globales::elPuerto.escribir( "diagnostico: Bluefruit.begin() = " );
+        Globales::elPuerto.escribir( ok ? "true" : "false" );
+        Globales::elPuerto.escribir( "\n" );
         (*this).detenerAnuncio();
     }
 
@@ -84,6 +88,10 @@ public:
         // 3. Configurar potencia y nombre visible en el escaneo
         Bluefruit.setTxPower( (*this).txPower );
         Bluefruit.setName( (*this).nombreEmisora );
+
+        // 3bis. Limpiar anuncios previos para poder repetir el anuncio en cada vuelta
+        Bluefruit.Advertising.clearData();
+        Bluefruit.ScanResponse.clearData();
         Bluefruit.ScanResponse.addName();
 
         // 4. Cargar el beacon en la carga util del anuncio
@@ -92,7 +100,12 @@ public:
         Bluefruit.Advertising.setInterval(100, 100); // Intervalo de 62.5 ms
 
         // 5. Iniciar la emision continua sin tiempo limite (0 = indefinido)
-        Bluefruit.Advertising.start( 0 );
+        bool okStart = Bluefruit.Advertising.start( 0 );
+
+        // --- diagnostico: comprobar si start() arranca de verdad ---
+        Globales::elPuerto.escribir( "diagnostico: start() = " );
+        Globales::elPuerto.escribir( okStart ? "true" : "false" );
+        Globales::elPuerto.escribir( "\n" );
     }
 
     // Emite un iBeacon con una carga de bytes personalizada (para pruebas libres)

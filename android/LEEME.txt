@@ -1,19 +1,15 @@
 LEEME - App Android del beacon
 ==============================
 
-Ficheros de la app del telefono (spec: apartado 5 de Tarea 2).
-La logica de estados no esta aqui: esta en ../logicaFakeTelefono/.
+App del telefono (spec 04/06 de Tarea 2). Ya es un proyecto de
+Android Studio AUTOCONTENIDO: incluye app/src/main/java/logicaFakeTelefono/
+(la logica de la spec 04). No hay que copiar nada de fuera.
 
-1) MONTAR EL PROYECTO EN ANDROID STUDIO
-   - Abrir Android Studio (la primera vez descarga el SDK solo).
-   - Crear un proyecto vacio (minSdk 28) con nombre de paquete es.gti3a.beacon.
-   - Copiar a app/src/main/java/es/gti3a/beacon/:
-       MainActivity.java, EscannerBeaconBluetooth.java, TramaIBeacon.java
-   - Copiar a app/src/main/java/ (paquete raiz, sin carpeta):
-       ../../logicaFakeTelefono/*.java   (EstadoLogica, EscannerBeacon,
-       EscannerBeaconFake, ClienteREST, ClienteRESTHttp, LogicaFake)
-   - Copiar activity_main.xml a app/src/main/res/layout/.
-   - Fusionar AndroidManifest.xml y build.gradle con los del proyecto.
+1) ABRIR EN ANDROID STUDIO
+   - Android Studio -> File -> Open -> seleccionar esta carpeta (android/)
+   - Aceptar "Trust Project" y esperar al primer Sync (la primera
+     vez descarga Gradle 8.7, el plugin AGP 8.5.2 y appcompat).
+   - Si pide instalar SDK/aceptar licencias, aceptar.
 
 2) URL DEL SERVIDOR (MainActivity.URL_SERVIDOR)
    - Emulador: http://10.0.2.2:8080/rest/guardarCodigo.php  (por defecto)
@@ -21,8 +17,17 @@ La logica de estados no esta aqui: esta en ../logicaFakeTelefono/.
      http://192.168.1.50:8080/rest/guardarCodigo.php
 
 3) ARRANCAR EL SERVIDOR EN EL PC (desde la carpeta Proyecto/)
-   php -S localhost:8080 -t .
+   php -S 0.0.0.0:8080 -t .
+   (0.0.0.0 para que el movil pueda conectarse; abrir el firewall
+   del puerto 8080 si el movil no conecta)
 
 4) EL BEACON DEL SENSOR (../arduino/)
    - Nombre del anuncio: Andreutale  (lo filtra EscannerBeaconBluetooth)
    - Codigo que emite en el minor: 1234
+   - El beacon emite ~1 s cada ~4,5 s: al pulsar Escanear, esperar
+     unos segundos.
+
+5) PRUEBA COMPLETA
+   Servidor arrancado -> placa emitiendo -> movil con Bluetooth ON,
+   GPS ON y permisos concedidos -> Escanear -> "Codigo: 1234" ->
+   Enviar -> "Enviado con exito" -> recargar la web -> "Codigo: 1234".
