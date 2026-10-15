@@ -35,7 +35,7 @@ function consultarUltimoCodigo() {
     return (object) array( "valor" => (int) $fila->valor, "fecha" => $fila->fecha );
 
   } catch ( PDOException $e ) {
-    return (object) array( "error" => "no hay códigos guardados" );
+    return (object) array( "error" => "error al conectarse con la base de datos", "detalle" => $e->getMessage() );
   }
 }
 ?>

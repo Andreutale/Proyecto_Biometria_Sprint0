@@ -10,7 +10,7 @@ import java.util.Arrays;
 //
 // (TramaIBeacon del ejemplo Android-BTLE de Tarea 1)
 //
-// @author: Jordi Bataller i Mascarell
+// @author: Andreu Aliaga Machí
 //
 // ---------------------------------------------------------
 // ---------------------------------------------------------

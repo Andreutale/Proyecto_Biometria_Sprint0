@@ -1,4 +1,4 @@
 author.md
 ========
 
-Andreu
+Andreu Aliaga Machí
