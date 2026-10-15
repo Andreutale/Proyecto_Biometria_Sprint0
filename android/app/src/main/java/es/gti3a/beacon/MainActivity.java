@@ -35,8 +35,10 @@ public class MainActivity extends AppCompatActivity {
 
   // en el emulador 10.0.2.2 apunta al PC; con movil fisico
   // hay que poner la IP del PC en la misma red
+  // (ahora: Wi-Fi del PC = 10.221.203.30; si cambia de red,
+  //  mirar con ipconfig y actualizar)
   private static final String URL_SERVIDOR =
-    "http://10.0.2.2:8080/rest/guardarCodigo.php";
+    "http://10.221.203.30:8080/rest/guardarCodigo.php";
 
   private TextView elTexto = null;
   private Button botonEscanear = null;

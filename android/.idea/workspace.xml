@@ -5,27 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f8080216-0d0b-4f2b-a2e4-2144b169d523" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/8.9/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.9/dependencies-accessors/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.9/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.9/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/8.9/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.0/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.0/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.0/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.0/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/9.2.0/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AndroidManifest.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/EscannerBeaconBluetooth.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/LEEME.txt" beforeDir="false" afterPath="$PROJECT_DIR$/LEEME.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MainActivity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TramaIBeacon.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/activity_main.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arduino/HolaMundoIBeacon/EmisoraBLE.h" beforeDir="false" afterPath="$PROJECT_DIR$/../arduino/HolaMundoIBeacon/EmisoraBLE.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../arduino/HolaMundoIBeacon/Publicador.h" beforeDir="false" afterPath="$PROJECT_DIR$/../arduino/HolaMundoIBeacon/Publicador.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.7/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/es/gti3a/beacon/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/es/gti3a/beacon/MainActivity.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
